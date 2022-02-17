@@ -1,0 +1,82 @@
+﻿@model BE.User
+
+@{
+    ViewData["Title"] = "Detali";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@{
+    if(ViewBag.Result == true)
+    {
+        <script>alert("شما قادر به حذف این ادمین نیستید")</script>
+    }
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>مدیریت</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index","Admins",new {IsRegister = true})">داشبورد</a></li>
+                        <li class="breadcrumb-item active">مدیریت ادمین @Model.ID</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                مشاهده ادمین
+                            </h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-sm-2">
+                                    نام کاربری
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.UserName)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    رمز عبور
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Password)
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <div>
+                    <a asp-action="DeleteUsers" asp-route-id="@Model.ID"><i class="fa fa-remove"></i></a> |
+                    <a asp-action="EditUsers" asp-route-id="@Model.ID"><i class="fa fa-edit"></i></a> |
+                    <a href="@Url.Action("Users","Admins")"><i class="fa fa-backward"></i></a>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+@{
+    if(ViewBag.IsAdd == true)
+    {
+        <script>alert("شما قادر به حذف آخر کاربر نیستید")</Script>
+    }
+}

@@ -1,0 +1,81 @@
+﻿@model BE.Blog
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>ویرایش</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index","Admins",new {IsRegister = true})">داشبورد</a></li>
+                        <li class="breadcrumb-item active">ویرایش وبلاگ @Model.ID</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">مثال ساده</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form asp-action="Edit" role="form" asp-route-id=@Model.ID method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">نام وبلاگ</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" value="@Model.NameBlgo" name="NameBlgo" placeholder="نام وبلاگ را وارد کنید">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">توضیح خلاصه</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" value="@Model.ShortExp" name="ShortExp" maxlength="150" placeholder="متن را وارد کنید"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">متن وبلاگ</label>
+                            <textarea class="form-control" id="exampleInputPassword1" name="Text" placeholder="متن را وارد کنید"> @Model.Text </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">تگ های وبلاگ</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" value="@Model.Tags" name="Tags" placeholder="تگ های وبلاگ را وارد کنید">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">بار گذاری عکس</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" name="Photo" class="custom-file-input" id="exampleInputFile">
+                                    <label class="custom-file-label" for="exampleInputFile">انتخاب عکس</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="">Upload</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">ارسال</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <a href="@Url.Action("Blogs","Admins")"><i class="fa fa-backward"></i></a>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

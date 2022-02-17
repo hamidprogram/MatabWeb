@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود</title>
+    <link rel="stylesheet" href="~/assets/login/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <video autoplay muted loop id="myvideo">
+        <source src="~/assets/login/Organic_Lines_4K_Motion_Background_Loop.mp4">
+    </video>
+    <div class="container">
+        <i class="material-icons manageacc">manage_accounts</i>
+        <h3>ورود</h3>
+        <form asp-action="Login" method="post">
+            <div class="form-control">
+                <input id="name" type="text" name="PhoneNumber" required placeholder="شماره تلفن">
+            </div>
+
+            <div class="form-control">
+                <input id="pass" type="password" name="Password" required placeholder="رمز">
+            </div>
+            @*<button class="btn">ورود</button>*@
+            <input type="submit" class="btn" value="ورود" />
+        </form>
+        @{
+            if(ViewBag.IsAdd == true)
+            {
+                <p>شماره تماس یا کلمه عبور اشتباه است</p>
+            }
+        }
+        <p>اگر حساب ندارید بروی این لینک کلیک کنید&nbsp;<a href="@Url.Action("Singup","Login")">ثبت نام</a></p>
+    </div>
+</body>
+</html>

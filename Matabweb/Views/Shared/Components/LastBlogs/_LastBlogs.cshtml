@@ -1,0 +1,17 @@
+﻿@model List<BE.Blog>
+
+<h3 class="sidebar-title">پست های اخیر</h3>
+<div class="sidebar-item recent-posts">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="post-item clearfix">
+                <img src="~/assets/images/Blogs/@item.Photo" alt="" />
+                <h4>
+                    <a href="@Url.Action("SingleBlog","Blogs",new {id = item.ID})">@item.NameBlgo</a>
+                </h4>
+                <time datetime="2020-01-01">@item.Deate</time>
+            </div>
+        }
+    }
+</div>

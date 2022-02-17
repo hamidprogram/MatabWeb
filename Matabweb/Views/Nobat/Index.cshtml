@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BE.Nobat>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+    <br />
+    <section id="values" class="values">
+        <div class="container">
+            <a class="btn btn-block btn-outline-primary btn-lg" href="@Url.Action("Create","Nobat",new {customerid = @ViewBag.CustomerID})">گرفتن نوبت</a>
+            <a class="btn btn-block btn-outline-primary btn-lg" href="@Url.Action("Detail","Login",new {customerid = @ViewBag.CustomerID})">مدیریت حساب</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            تاریخ نوبت
+                        </th>
+                        <th>
+                            ساعت حضور
+                        </th>
+                        <th>
+                            وضعیت
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Deate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Time)
+                            </td>
+                            <td>
+                                @{
+                                    if (item.Condition == false)
+                                    {
+                                        <p>قابل ویرایش</p>
+                                    }
+                                    else
+                                    {
+                                        <p>غیر قابل ویرایش</p>
+                                    }
+                                }
+                            </td>
+                            <td>
+                                <a asp-action="Detail" asp-route-id="@item.ID" asp-route-Condtaion="@item.Condition" asp-route-customerid="@ViewBag.CustomerID">مشاهده</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#" tabindex="-1">قبلی</a></li>
+                        @{
+                            BLL.Nobat_BLL bll = new BLL.Nobat_BLL();
+                            int f = bll.GetTotalCustomer(ViewBag.CustomerID);
+                            int count;
+                            if (f % 10 == 0) count = f / 10;
+                            else count = (f / 10) + 1;
+                            for (var i = 0; i < count; i++)
+                            {
+                                int a = i;
+                                a++;
+                                <li class="page-item @((((int)ViewBag.PageID) == i)?"active":"")"><a class="page-link" data-dt-idx=@i href="@Url.Action("Index","Nobat",new {id = ViewBag.CustomerID,IsRegister = true,pageid = i})">@a<span class="sr-only"></span></a></li>
+                            }
+                        }
+                        <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+</main>

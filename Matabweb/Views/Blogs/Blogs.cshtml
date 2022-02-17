@@ -1,0 +1,109 @@
+﻿@model List<BE.Blog>
+@{
+    ViewData["Title"] = "Blogs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="@Url.Action("Index","Home")">خانه</a></li>
+                <li>مقالات</li>
+            </ol>
+            <h2>مقالات</h2>
+        </div>
+    </section>
+    <!-- End Breadcrumbs -->
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-8 entries">
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <article class="entry">
+                        <div class="entry-img">
+                            <img src="~/assets/images/Blogs/@item.Photo"
+                                 alt=""
+                                 class="img-fluid" />
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="@Url.Action("SingleBlog","Blogs",new {id=@item.ID})">
+                                @item.NameBlgo
+                            </a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-clock"></i>
+                                    <a class="me-2"
+                                       href="@Url.Action("SingleBlog","Blogs",new {id=@item.ID})">
+                                        <time datetime="2020-01-01">
+                                            @item.Deate
+                                        </time>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                @item.ShortExp
+                            </p>
+                            <div class="read-more mt-5">
+                                <a href="@Url.Action("SingleBlog","Blogs",new {id=@item.ID})">بیشتر بخوانید</a>
+                            </div>
+                        </div>
+                    </article>
+                        }
+                    }
+                    
+                    <div class="blog-pagination">
+                        <ul class="justify-content-center">
+                            @{
+                                BLL.Blog_BLL bll = new BLL.Blog_BLL();
+                                int f = bll.GetTotal();
+                                int count;
+                                if (f % 10 == 0) count = f / 10;
+                                else count = (f / 10) + 1;
+                                for (var i = 0; i < count; i++)
+                                {
+                                    int a = i;
+                                    a++;
+                                    <li class="@((((int)ViewBag.PageID) == i)?"active":"")"><a data-dt-idx=@i href="@Url.Action("Blogs","Blogs",new {pageid = i})">@a</a></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!-- End blog entries list -->
+
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">جستجو</h3>
+                        <div class="sidebar-item search-form">
+                            <form action="">
+                                <input type="text" />
+                                <button type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- End sidebar search formn-->
+                        @await Component.InvokeAsync("LastBlogs")
+                        <!-- End sidebar -->
+                    </div>
+                    <!-- End blog sidebar -->
+                </div>
+            </div>
+    </section>
+    <!-- End Blog Section -->
+</main>
+<!-- End #main -->
+@section Scripts{
+<script src="~/assets/js/main.js"></script>
+}

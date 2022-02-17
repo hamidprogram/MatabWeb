@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "85243e24-efe9-44ed-a6f9-c4e944b57182": {
+      "ProjectGuid": "85243e24-efe9-44ed-a6f9-c4e944b57182",
+      "DisplayName": "BE",
+      "ColorIndex": 0
+    },
+    "b082e329-3509-4cbd-8bd5-2286291e5106": {
+      "ProjectGuid": "b082e329-3509-4cbd-8bd5-2286291e5106",
+      "DisplayName": "Matabweb",
+      "ColorIndex": 1
+    },
+    "ce26a783-ac76-4511-8610-8ce65950842e": {
+      "ProjectGuid": "ce26a783-ac76-4511-8610-8ce65950842e",
+      "DisplayName": "BLL",
+      "ColorIndex": 2
+    },
+    "c52a08ae-b8fd-47b3-a23b-c870ff2021fb": {
+      "ProjectGuid": "c52a08ae-b8fd-47b3-a23b-c870ff2021fb",
+      "DisplayName": "DAL",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Blogs";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<BE.Blog>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>جداول وبلاگ ها</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index","Admins",new {IsRegister = true})">داشبورد</a></li>
+                        <li class="breadcrumb-item active">مدیریت وبلاگ ها</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <a class="btn btn-block btn-outline-primary btn-lg" href="@Url.Action("Create","Admins")">اضافه کردن وبلاگ</a>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>شماره</th>
+                                    <th>نام وبلاگ</th>
+                                    <th>توضیح کوتاه</th>
+                                    <th>تصویر وبلاگ</th>
+                                    <th>تگ</th>
+                                    <th>تاریخ</th>
+                                    <th>ساعت</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+
+                                    foreach (var i in Model)
+                                    {
+
+                                        <tr>
+                                            <td>@i.ID</td>
+                                            <td>@i.NameBlgo</td>
+                                            <td>@i.ShortExp</td>
+                                            <td><img style="width:100px;height:100px" src="~/assets/images/Blogs/@i.Photo" /></td>
+                                            <td>@i.Tags</td>
+                                            <td>@i.Deate</td>
+                                            <td>@i.Time</td>
+                                            <td>
+                                                <a href="@Url.Action("Detali","Admins",new {id=i.ID})"><i class="fa fa-edit"></i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <div class="row text-center">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#" tabindex="-1">قبلی</a></li>
+                    @{
+                        BLL.Blog_BLL bll = new BLL.Blog_BLL();
+                        int f = bll.GetTotal();
+                        int count;
+                        if (f % 10 == 0) count = f / 10;
+                        else count = (f / 10) + 1;
+                        for (var i = 0; i < count; i++)
+                        {
+                            int a = i;
+                            a++;
+                            <li class="page-item @((((int)ViewBag.PageID) == i)?"active":"")"><a class="page-link" data-dt-idx=@i href="@Url.Action("Blogs","Admins",new {pageid = i})">@a<span class="sr-only">(current)</span></a></li>
+                        }
+                    }
+                    <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

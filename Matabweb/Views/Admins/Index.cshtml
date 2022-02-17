@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">داشبورد</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Main row -->
+            <div class="row">
+                <!-- Left col -->
+                <section class="col-lg-7 connectedSortable">
+                    <!-- Calendar -->
+                    <div class="card bg-success-gradient">
+                        <div class="card-header no-border">
+
+                            <h3 class="card-title">
+                                <i class="fa fa-calendar"></i>
+                                تقویم
+                            </h3>
+                            <!-- tools card -->
+                            <div class="card-tools">
+                                <!-- button with a dropdown -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <div class="dropdown-menu float-right" role="menu">
+                                        <a href="#" class="dropdown-item">رویداد تازه</a>
+                                        <a href="#" class="dropdown-item">حذف رویدادها</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item">نمایش تقویم</a>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-success btn-sm" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-success btn-sm" data-widget="remove">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <!-- /. tools -->
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <!--The calendar -->
+                            <div id="calendar" style="width: 100%"></div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </section>
+                <!-- /.Left col -->
+                <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                <section class="col-lg-5 connectedSortable">
+                    <div class="card bg-info">
+                        <div class="card-header no-border">
+                            <div class="inner">
+                                <h3>@ViewBag.Nobats</h3>
+
+                                <p>تعداد نوبت آنلاین</p>
+                            </div>
+                            <a href="@Url.Action("Nobats","Admins")" class="small-box-footer">اطلاعات بیشتر <i class="fa fa-arrow-circle-left"></i></a>
+                        </div>
+                    </div>
+                    <!--////////////////////////////-->
+                    <div class="card bg-success">
+                        <div class="card-header no-border">
+                            <div class="inner">
+                                <h3>@ViewBag.Moshaveres<sup style="font-size: 20px"></sup></h3>
+
+                                <p>تعداد مشاوره</p>
+                            </div>
+                            <a href="@Url.Action("Moshaveres","Admins")" class="small-box-footer">اطلاعات بیشتر <i class="fa fa-arrow-circle-left"></i></a>
+                        </div>
+                    </div>
+                    <!--////////////////////////////-->
+                    <div class="card bg-warning">
+                        <div class="card-header no-border">
+                            <div class="inner">
+                                <h3>@ViewBag.Customers</h3>
+
+                                <p>تعداد کاربران</p>
+                            </div>
+                            <a href="@Url.Action("Customers","Admins")" class="small-box-footer">اطلاعات بیشتر <i class="fa fa-arrow-circle-left"></i></a>
+                        </div>
+                    </div>
+                    <!--////////////////////////////-->
+                    <div class="card bg-danger">
+                        <div class="card-header no-border">
+                            <div class="inner">
+                                <h3>@ViewBag.Blogs</h3>
+
+                                <p>تعداد وبلاگ</p>
+                            </div>
+                            <a href="@Url.Action("Blogs","Admins")" class="small-box-footer">اطلاعات بیشتر <i class="fa fa-arrow-circle-left"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <!-- right col -->
+            </div>
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

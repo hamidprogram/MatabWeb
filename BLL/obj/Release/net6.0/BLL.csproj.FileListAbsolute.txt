@@ -1,0 +1,17 @@
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\BLL.deps.json
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\BLL.dll
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\ref\BLL.dll
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\BLL.pdb
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\BE.dll
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\DAL.dll
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\BE.pdb
+E:\my progect\MatabWeb\Matabweb\BLL\bin\Release\net6.0\DAL.pdb
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.csproj.AssemblyReference.cache
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.AssemblyInfoInputs.cache
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.AssemblyInfo.cs
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.csproj.CoreCompileInputs.cache
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.csproj.CopyComplete
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.dll
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\ref\BLL.dll
+E:\my progect\MatabWeb\Matabweb\BLL\obj\Release\net6.0\BLL.pdb

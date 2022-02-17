@@ -1,0 +1,88 @@
+﻿@model BE.Blog
+@{
+    ViewData["Title"] = "SingleBlog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="@Url.Action("Index","Home")">خانه</a></li>
+                <li><a href="@Url.Action("Blogs","Blogs")">مقالات</a></li>
+                <li>مقاله</li>
+            </ol>
+            <h2>مقاله</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    <article class="entry entry-single">
+
+                        <div class="entry-img">
+                            <img src="~/assets/images/Blogs/@Model.Photo" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="@Url.Action("SingleBlog","Blogs",new {id = @Model.ID})">@Model.NameBlgo</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html">@Model.Deate</time></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>@Model.ShortExp</p>
+                            <p>@Model.Text</p>
+                        </div>
+                    </article>
+                    <!-- End blog entry -->
+                </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">جستجو</h3>
+                        <div class="sidebar-item search-form">
+                            <form action="">
+                                <input type="text" />
+                                <button type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- End sidebar search formn-->
+                        @await Component.InvokeAsync("LastBlogs")
+                        <div class="sidebar-item tags">
+                            <ul>
+                                @{
+                                    foreach (var item in Model.Tags.Split(','))
+                                    {
+                                        <li><a href="#">@item</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                        <!-- End sidebar -->
+                    </div>
+                    <!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+    </section><!-- End Blog Single Section -->
+
+</main><!-- End #main -->
+@section Scripts{
+<script src="~/assets/js/main.js"></script>
+}

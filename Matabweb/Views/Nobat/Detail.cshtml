@@ -1,0 +1,54 @@
+﻿@model BE.Nobat
+
+@{
+    ViewData["Title"] = "Detali";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+    <br />
+    <section id="values" class="values">
+        <div class="container">
+            <div>
+                <h4>مشاهده ی نوبت</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        تاریخ نوبت
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Deate)
+                    </dd>
+                    <dt class="col-sm-2">
+                        زمان حضور
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Time)
+                    </dd>
+                </dl>
+            </div>
+            <div>
+                @{
+                    Random random = new Random();
+                    int ra = random.Next(1000, 5000);
+                    if (ra % 2 != 0)
+                    {
+                        ra++;
+                    }
+                    int numk = @ViewBag.customerId + ra;
+                    int ram = ra / 2;
+                    if (ViewBag.con == true)
+                    {
+                        <a asp-action="Index" asp-route-id="@numk" asp-route-numk="@ram" asp-route-IsRegister="true">بازگشت</a>
+                    }
+                    else
+                    {
+                        <a asp-action="Delete" asp-route-id="@Model.ID" asp-route-customerid="@ViewBag.customerId">حذف|</a>
+                        <a asp-action="Edit" asp-route-id="@Model.ID" asp-route-customerid="@ViewBag.customerId">تصحیح|</a>
+                        <a asp-action="Index" asp-route-id="@numk" asp-route-numk="@ram" asp-route-IsRegister="true">بازگشت</a>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+</main>

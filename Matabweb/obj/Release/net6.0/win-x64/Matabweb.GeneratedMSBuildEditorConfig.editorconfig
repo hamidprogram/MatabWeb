@@ -1,0 +1,164 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Matabweb
+build_property.RootNamespace = Matabweb
+build_property.ProjectDir = E:\my progect\MatabWeb\Matabweb\Matabweb\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\my progect\MatabWeb\Matabweb\Matabweb
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Blogs/Blogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEJsb2dzXEJsb2dzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Blogs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEJsb2dzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Blogs/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEJsb2dzXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Blogs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEJsb2dzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Customers/Customers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEN1c3RvbWVyc1xDdXN0b21lcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEN1c3RvbWVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Moshaveres/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE1vc2hhdmVyZXNcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Moshaveres/Moshaveres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE1vc2hhdmVyZXNcTW9zaGF2ZXJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Nobats/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE5vYmF0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Nobats/Nobats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXE5vYmF0c1xOb2JhdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Register/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFJlZ2lzdGVyXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFVzZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Users/Detali.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFVzZXJzXERldGFsaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFVzZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Admins/Users/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFVzZXJzXFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Blogs/Blogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQmxvZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Blogs/SingleBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcU2luZ2xlQmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Error/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3I0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Login/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Login/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Login/singup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cc2luZ3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Nobat/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iYXRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Nobat/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iYXRcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Nobat/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iYXRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Nobat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iYXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Shared/Components/LastBlogsIndex/_LastBlogsIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGFzdEJsb2dzSW5kZXhcX0xhc3RCbG9nc0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Shared/Components/LastBlogs/_LastBlogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGFzdEJsb2dzXF9MYXN0QmxvZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/my progect/MatabWeb/Matabweb/Matabweb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ft8hj5fwuc

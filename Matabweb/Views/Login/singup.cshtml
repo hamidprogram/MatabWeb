@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساخت حساب</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="~/assets/login/styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="myvideo">
+        <source src="~/assets/login/Organic_Lines_4K_Motion_Background_Loop.mp4">
+    </video>
+    <div class="container">
+		<i class="material-icons manageacc">manage_accounts</i>
+        <h3>ساخت حساب</h3>
+        <form asp-action="Singup" method="post">
+			<div class="form-control">
+                <input id="name" type="name" name="Name" required placeholder="نام و نام خانوادگی">
+            </div>
+
+            <div class="form-control">
+                <input id="pass" type="text" name="PhoneNumber" required placeholder="شماره تلفن">
+            </div>
+			<div class="form-control">
+                <input id="passconfirm" type="password" name="Password" required placeholder="رمز">
+            </div>
+            @*<button class="btn">ثبت نام</button>*@
+            <input type="submit" class="btn" value="ثبت نام" />
+        </form>
+        @{
+            if(ViewBag.IsAdd == true)
+            {
+                <p>این شماره تماس قبلا در بانک اطلاعاتی موجود بوده است</p>
+            }
+        }
+        <p>اگر حساب دارید بروی این لینک کلیک کنید&nbsp;<a href="@Url.Action("Login","Login")">ورود</a></p>
+    </div>
+</body>
+</html>

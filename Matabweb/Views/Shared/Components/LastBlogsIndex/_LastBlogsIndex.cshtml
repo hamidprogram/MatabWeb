@@ -1,0 +1,17 @@
+﻿@model List<BE.Blog>
+
+    @{
+    foreach (var item in Model)
+    {
+        <div class="col-lg-4">
+            <div class="post-box">
+                <div class="post-img"><img src="~/assets/images/Blogs/@item.Photo" class="img-fluid" alt=""></div>
+                <span class="post-date">@item.Deate</span>
+                <h3 class="post-title">@item.NameBlgo</h3>
+                <a href="@Url.Action("SingleBlog","Blogs",new {id = item.ID})" class="readmore stretched-link mt-auto">
+                    <span>خواندن مقاله</span><i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    }
+}

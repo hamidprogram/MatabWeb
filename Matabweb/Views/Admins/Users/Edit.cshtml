@@ -1,0 +1,59 @@
+﻿@model BE.User
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>تصحیح ادمین</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index","Admins",new {IsRegister = true})">داشبورد</a></li>
+                        <li class="breadcrumb-item active">تصحیح ادمین</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">فرم زیر را پر کنید</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form asp-action="EditUsers" role="form" method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">نام کاربری</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" value="@Model.UserName" name="UserName" placeholder="نام کاربری را وارد کنید">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">رمز عبور</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" value="@Model.Password" name="Password" placeholder="رمز عبور را وارد کنید">
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">ارسال</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
